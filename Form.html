@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="formcheck.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body name="myBody" id="myBody">
+    <h1>Bilgilerinizi Eksiksiz Giriniz</h1>
+    <hr>
+    <noscript>
+        <style type="text/css">
+            .pagecontainer {display:none;}
+        </style>
+        <div class="noscriptmsg">
+        You don't have javascript enabled.  Good luck with that.
+        </div>
+    </noscript>
+    <p style="color:red;font-weight: bold;font-size:larger;" id="errorText"></p>
+    <form action="http://localhost" method="post" id="myForm">
+        <h4>Hesap Bilgileriniz</h4>
+        <p>
+             <label for="username">Kullanici Adi</label> 
+            <input type="text" name="username" id="username" required>
+            <span style="color: red;" id="usernameValid"></span>
+        </p>
+        <p>
+            <label for="password">Password </label> 
+           <input type="password" name="password" id="password" required >
+           <span style="color: red;" id="password"></span>
+
+       </p>
+       <p>
+        <label for="email">Email </label> 
+        <input type="email" name="email" id="email" placeholder="biris@gmail.com" required>
+        </p>
+        <p>
+            <label for="dtrh">Dogum Tarihi </label> 
+            <input type="date" name="dtrh" id="dtrh" max="2006-01-01" min="1950-01-01" value="2000-01-01">
+        </p>
+        <h4>Kisisel Bilgileriniz</h4>
+        <p>
+            <label for="ad">Adiniz</label>
+            <input type="text" name="ad" id="ad">
+        </p>
+        <p>
+            <label for="soyad">Soyadiniz</label>
+            <input type="text" name="soyad" id="soyad">
+        </p>
+        <p>
+            <label for="tel">Gsm</label>
+            <input type="tel" 
+                    name="tel" 
+                        id="tel" 
+                        placeholder="(532) 333 44 55"
+                        pattern="[0-9]{3} [0-9]{3} [0-9]{4}$">
+        </p>
+        <p>
+            <label for="sehir">Sehir</label>
+            <select name="sehir" id="sehir">
+                    <option value="1">Adana</option>
+                    <option value="6">Ankara</option>
+                    <option value="34" selected>Istanbul</option>
+                    <option value="35">Izmir</option>
+                    <option value="67" disabled>Zonguldak</option>
+           </select>
+        </p>
+        <p>
+            <label for="Gelir">Geliriniz</label>
+            <input type="number" name="Gelir" id="Gelir" min="17002" max="500000">
+        </p>
+        <p>
+            <label for="cinsiyet">Cinsiyet:</label>
+            <input type="radio" name="cinsiyet" id="cinsiyet" value="erkek"> Erkek
+            <input type="radio" name="cinsiyet" id="cinsiyet" value="kadin"> Kadin
+
+        </p>
+        <p>
+            <h4>Hobileriniz</h4>
+            <input type="checkbox" name="hobiler1" id="hobiler1" value="sinema"> <label for="hobiler1">Sinema</label>   
+            <input type="checkbox" name="hobiler2" id="hobiler2" value="gezmek"><label for="hobiler2">Gezmek</label>
+            <input type="checkbox" name="hobiler3" id="hobiler3" value="Spor"><label for="hobiler3">Spor</label>
+            <input type="checkbox" name="hobiler4" id="hobiler4" value="Kitap"><label for="hobiler4">Kitap Okumak</label>
+            <input type="checkbox" name="hobiler5" id="hobiler5" value="Treking"><label for="hobiler5">Treking</label>
+
+        </p>
+        <input type="hidden" name="id" id="id" value="5">
+        <input type="submit" value="Kaydet">
+        <button type="button" id="kaydet2" onclick="formuKontrolEt()">Kaydet 2</button>
+        <button type="button" onclick="elemanlariBastir()">Html Children </button>
+        <button type="reset">Reset</button>
+    </form>
+   
+    <!-- <div id="container" class="divBorder">
+        <label for="Gelir">Geliriniz</label>
+        <input type="number" name="Gelir" id="Gelir" min="17002" max="500000">
+        <p class="myP">
+            
+           
+            Lorem ipsum <b>dolor</b> sit, <span class="mySpan">amet consectetur adipisicing</span> elit. Labore, magni dicta voluptatibus aliquid ipsa tempore consectetur eum nostrum id quis a sapiente. Iure minima accusamus, praesentium iusto aut natus. Beatae.</p>
+    </div> -->
+   <div id="container">
+
+   </div>
+</body>
+</html>

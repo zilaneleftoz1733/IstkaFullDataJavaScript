@@ -1,0 +1,18 @@
+div {
+    border:2px;
+    border-color: red;
+}
+.divBorder{
+    border:2px solid; 
+    border-color: red;
+}
+.myP {
+    
+    border:2px solid;
+    border-color: blue;
+}
+.mySpan{
+    /* display: block; */ /* istenirse block elemnt yapilablir. Default davranisi inline elementtir*/
+    border:2px solid;
+    border-color: green;
+}
